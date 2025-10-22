@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "memory_policy"
+version = "0.1.0"
+description = "Example editable package"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{ name = "conscious-choi" }]
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# optional console scripts
+[project.scripts]
+your-cli = "your_package.__main__:main"
+
+[tool.setuptools.package-data]
+your_package = ["*.txt", "*.cfg"]
